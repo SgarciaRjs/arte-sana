@@ -1,16 +1,16 @@
 {
   "CSS-002": {
-    "occurrences": 10,
+    "occurrences": 14,
     "confidence": 1,
     "mastered_explicitly": false,
     "first_seen": "2026-10-03T01:43:49.256Z",
-    "last_seen": "2026-10-03T01:53:05.566Z"
+    "last_seen": "2026-10-20T02:21:34.152Z"
   },
   "CSS-001": {
-    "occurrences": 130,
+    "occurrences": 2614,
     "confidence": 1,
     "mastered_explicitly": false,
     "first_seen": "2026-10-03T01:57:48.348Z",
-    "last_seen": "2026-10-06T00:59:39.077Z"
+    "last_seen": "2026-10-21T22:17:33.617Z"
   }
 }
