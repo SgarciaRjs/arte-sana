@@ -7,7 +7,7 @@
 
     <title>Arte-Sana | Hecho a mano con amor</title>
     <meta name="description"
-        content="Arte-Sana: pulseras, llaveros, charms, separadores de libros y más, hechos a mano con amor.">
+        content="Arte-Sana: pulseras, charms, colgantes, separadores de libros y más, hechos a mano con amor.">
     <meta name="theme-color" content="#FFF6EE">
     <link rel="icon" href="img/logo_arte-sana.png">
 
@@ -64,7 +64,7 @@
                     <div class="hero-botones">
                         <a class="btn btn-primario" href="#productos" data-ir>Ver productos</a>
                         <a class="btn btn-secundario"
-                            href="https://wa.me/50688555545?text=Hola%20Arte-Sana,%20quisiera%20m%C3%A1s%20informaci%C3%B3n"
+                            href="https://api.whatsapp.com/send?phone=50688555545&text=Hola%20Arte-Sana,%20quisiera%20m%C3%A1s%20informaci%C3%B3n"
                             target="_blank" rel="noopener">
                             <i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por WhatsApp
                         </a>
@@ -72,14 +72,12 @@
                 </div>
 
                 <div class="hero-imagen">
-                    <img src="img/fondo.jpg.jpeg" alt="Llavero y pulsera artesanal de Arte-Sana">
-                    <div class="hero-sello">
-                        <img src="img/logo_arte-sana.png" alt="Logo de Arte-Sana">
-                    </div>
+                    <img class="hero-imagen-motivacional" src="img/inicio.jpeg"
+                        alt="Canasta de regalo artesanal para mamá, preparada con amor">
                 </div>
             </div>
 
-            <!-- Se llena solo con las primeras piezas de la lista de productos -->
+            <!-- Se llena automáticamente con una pieza de cada categoría -->
             <div class="destacados" id="destacados-bloque" hidden>
                 <h2 class="titulo-seccion">Algunas de nuestras piezas</h2>
                 <div class="productos-galeria" id="destacados"></div>
@@ -101,9 +99,9 @@
                     <h3 class="categoria-titulo" id="categoria-pulseras"><span>Pulseras</span></h3>
                     <div class="productos-galeria" aria-label="Pulseras"></div>
                 </section>
-                <section class="categoria-productos" data-categoria="llaveros" aria-labelledby="categoria-llaveros">
-                    <h3 class="categoria-titulo" id="categoria-llaveros"><span>Llaveros</span></h3>
-                    <div class="productos-galeria" aria-label="Llaveros"></div>
+                <section class="categoria-productos" data-categoria="colgantes" aria-labelledby="categoria-colgantes">
+                    <h3 class="categoria-titulo" id="categoria-colgantes"><span>Colgantes</span></h3>
+                    <div class="productos-galeria" aria-label="Colgantes"></div>
                 </section>
                 <section class="categoria-productos" data-categoria="charms" aria-labelledby="categoria-charms">
                     <h3 class="categoria-titulo" id="categoria-charms"><span>Charms</span></h3>
@@ -128,7 +126,7 @@
                     <div class="productos-galeria" aria-label="Candelas"></div>
                 </section>
                 <section class="categoria-productos" data-categoria="otros" aria-labelledby="categoria-otros">
-                    <h3 class="categoria-titulo" id="categoria-otros"><span>Otros productos</span></h3>
+                    <h3 class="categoria-titulo" id="categoria-otros"><span>PortaFotos</span></h3>
                     <div class="productos-galeria" aria-label="Otros productos"></div>
                 </section>
             </div>
@@ -136,108 +134,248 @@
             <!--
                 LISTA DE PRODUCTOS
                 Para agregar uno nuevo, copia una línea y cambia la foto y el nombre.
-                La categoría se asigna sola según el nombre (pulsera, llavero, charm,
+                La categoría se asigna sola según el nombre (pulsera, colgante, charm,
                 separador, matera, porta lápices, candela). Si no coincide, va a "Otros productos".
                 Opcionales:
                   - Precio:      <article class="producto" data-precio="₡3.500">
                   - Descripción: <p class="producto-detalle">Texto aquí</p> (dentro del article)
+                  - Nombre para WhatsApp: agrega data-nombre-pedido="Diseño de flores"
+                    al article para identificar esta pieza en el mensaje sin cambiar el título visible.
             -->
             <template id="productos-origen">
-                <article class="producto"><img src="img/fondocarrusel1.jpg" alt="Llavero">
-                    <h3>Llavero</h3>
+                <article class="producto"><img src="img/Pulsera1.jpg.jpeg" alt="Charm para papá">
+                    <h3>Charm</h3>
                 </article>
-                <article class="producto"><img src="img/fondocarrusel2.jpg" alt="Llavero Día de la madre">
-                    <h3>Llavero Día de la madre</h3>
+                <article class="producto"><img src="img/Pulsera2.jpg" alt="Pulsera artesanal">
+                    <h3>Pulsera</h3>
                 </article>
-                <article class="producto"><img src="img/fondocarrusel3.jpg" alt="Pulsera Día de la madre">
-                    <h3>Pulsera Día de la madre</h3>
+                <article class="producto"><img src="img/Pulsera3.jpg" alt="Pulsera artesanal">
+                    <h3>Pulsera</h3>
                 </article>
-                <article class="producto"><img src="img/fondocarrusel4.jpg" alt="Charm Día de la madre">
-                    <h3>Charm Día de la madre</h3>
+                <article class="producto"><img src="img/Pulsera5.jpg" alt="Pulsera artesanal">
+                    <h3>Pulsera</h3>
                 </article>
-                <article class="producto"><img src="img/fondocarrusel5.jpg" alt="Charm para abuelita">
-                    <h3>Charm para abuelita</h3>
+                <article class="producto"><img src="img/Llavero.jpg" alt="Charm artesanal">
+                    <h3>Charm</h3>
                 </article>
-                <article class="producto"><img src="img/fondocarrusel6.jpg" alt="Llavero para mamá">
-                    <h3>Llavero para mamá</h3>
+                <article class="producto"><img src="img/Llavero4.jpg" alt="Charm artesanal">
+                    <h3>Charm</h3>
                 </article>
-                <article class="producto"><img src="img/fondocarrusel7.jpg" alt="Separador de libros">
+                <article class="producto"><img src="img/LLavero5.jpg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Llavero6.jpg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Llavero7.jpg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Llavero8.jpg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm1.jpg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm2.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm3.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm4.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm5.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm6.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm7.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm8.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm9.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm10.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm11.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm12.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm13.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm14.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm15.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm16.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm17.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm18.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm19.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm20.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm21.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm22.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm23.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm24.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm25.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm26.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm27.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm28.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm29.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm30.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm31.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm32.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm33.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm34.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm35.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm36.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm37.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm38.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm39.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm40.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm41.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm42.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm43.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm44.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm45.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm46.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm47.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm48.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Charm49.jpeg" alt="Charm artesanal">
+                    <h3>Charm</h3>
+                </article>
+                <article class="producto"><img src="img/Colgante.jpg" alt="Colgante artesanal">
+                    <h3>Colgante</h3>
+                </article>
+                <article class="producto"><img src="img/Colgante2.jpg" alt="Colgante artesanal">
+                    <h3>Colgante</h3>
+                </article>
+                <article class="producto"><img src="img/Candela1.jpg" alt="Candela artesanal">
+                    <h3>Candela</h3>
+                </article>
+                <article class="producto"><img src="img/Candela2.jpg" alt="Candela artesanal">
+                    <h3>Candela</h3>
+                </article>
+                <article class="producto"><img src="img/Candela3.jpg" alt="Candela artesanal">
+                    <h3>Candela</h3>
+                </article>
+                <article class="producto"><img src="img/Candela4.jpg" alt="Candela artesanal">
+                    <h3>Candela</h3>
+                </article>
+                <article class="producto"><img src="img/SeparaLibros.jpg" alt="Separador de libros artesanal">
                     <h3>Separador de libros</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto1.jpg.jpeg" alt="Separador de libros">
+                <article class="producto"><img src="img/SeparaLibros2.jpg" alt="Separador de libros artesanal">
                     <h3>Separador de libros</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto2.jpg" alt="Separador de libros">
+                <article class="producto"><img src="img/SeparaLibros3.jpeg" alt="Separador de libros artesanal">
                     <h3>Separador de libros</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto3.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/Materas1.jpg" alt="Matera artesanal">
+                    <h3>Matera</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto4.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/Materas2.jpg" alt="Matera artesanal">
+                    <h3>Matera</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto5.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/Materas3.jpg" alt="Matera artesanal">
+                    <h3>Matera</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto6.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/Materas4.jpg" alt="Matera artesanal">
+                    <h3>Matera</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto7.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/Materas10.jpg" alt="Matera artesanal">
+                    <h3>Matera</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto8.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/PortaLapices2.jpg" alt="Porta lápices artesanal">
+                    <h3>Porta lápices</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto9.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/PortaLapices3.jpg" alt="Porta lápices artesanal">
+                    <h3>Porta lápices</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto10.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/PortaLapices4.jpg" alt="Porta lápices artesanal">
+                    <h3>Porta lápices</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto11.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/PortaLapices5.jpg" alt="Porta lápices artesanal">
+                    <h3>Porta lápices</h3>
                 </article>
-                <article class="producto"><img src="img/fotoproducto12.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto13.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto14.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto15.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto16.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto17.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto18.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto19.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto20.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto21.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto22.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto23.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto24.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
-                </article>
-                <article class="producto"><img src="img/fotoproducto25.jpg" alt="Separador de libros">
-                    <h3>Separador de libros</h3>
+                <article class="producto"><img src="img/Portafoto1.jpg" alt="Portafoto artesanal">
+                    <h3>Portafoto</h3>
                 </article>
             </template>
         </section>
@@ -254,7 +392,7 @@
                 </p>
                 <div class="contacto-botones">
                     <a class="btn btn-primario"
-                        href="https://wa.me/50688555545?text=Hola%20Arte-Sana,%20quisiera%20m%C3%A1s%20informaci%C3%B3n"
+                        href="https://api.whatsapp.com/send?phone=50688555545&text=Hola%20Arte-Sana,%20quisiera%20m%C3%A1s%20informaci%C3%B3n"
                         target="_blank" rel="noopener">
                         <i class="bi bi-whatsapp" aria-hidden="true"></i> Escríbeme por WhatsApp
                     </a>
@@ -262,6 +400,15 @@
                         target="_blank" rel="noopener noreferrer">
                         <i class="bi bi-facebook" aria-hidden="true"></i> Facebook
                     </a>
+                </div>
+                <div class="codigo-qr">
+                    <p>Escanea para visitar nuestra página</p>
+                    <a href="https://arte-sanacr.com/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Abrir el sitio web de Arte-Sana">
+                        <img src="img/qr-arte-sana.svg" alt="Código QR para visitar arte-sanacr.com">
+                    </a>
+                    <a class="codigo-qr-url" href="https://arte-sanacr.com/" target="_blank"
+                        rel="noopener noreferrer">arte-sanacr.com</a>
                 </div>
             </div>
         </section>
@@ -316,8 +463,8 @@
                     </svg>
                 </a>
 
-                <a href="https://wa.me/50688555545" target="_blank" rel="noopener" class="socialContainer containerFour"
-                    aria-label="WhatsApp">
+                <a href="https://api.whatsapp.com/send?phone=50688555545" target="_blank" rel="noopener"
+                    class="socialContainer containerFour" aria-label="WhatsApp">
                     <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16" aria-hidden="true">
                         <path
                             d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
@@ -333,6 +480,7 @@
         // CONFIGURACIÓN
         // ==========================================================
         const WHATSAPP = "50688555545";
+        const WHATSAPP_GREETING = "Hola Arte-Sana! Me gustaron mucho tus productos quisiera ver más!";
 
         // ==========================================================
         // NAVEGACIÓN SPA SIN SCROLL
@@ -400,6 +548,7 @@
             const heading = card.querySelector("h3");
             const detail = card.querySelector(".producto-detalle");
             const title = heading.textContent.trim();
+            const orderName = card.dataset.nombrePedido || title;
 
             img.loading = "lazy";
             img.decoding = "async";
@@ -424,8 +573,9 @@
             order.className = "btn-pedir";
             order.target = "_blank";
             order.rel = "noopener";
-            order.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(`Hola Arte-Sana, me interesa: ${title}`)}`;
-            order.setAttribute("aria-label", `Pedir ${title} por WhatsApp`);
+            const message = `${WHATSAPP_GREETING}\nProducto: ${orderName}`;
+            order.href = `https://api.whatsapp.com/send?phone=${WHATSAPP}&text=${encodeURIComponent(message)}`;
+            order.setAttribute("aria-label", `Pedir ${orderName} por WhatsApp`);
             order.innerHTML = '<i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir';
             info.append(order);
 
@@ -436,7 +586,7 @@
         // Reparte cada producto en su categoría según el nombre
         const categoryRules = [
             { id: "pulseras", keyword: "pulsera" },
-            { id: "llaveros", keyword: "llavero" },
+            { id: "colgantes", keyword: "colgante" },
             { id: "charms", keyword: "charm" },
             { id: "separadores", keyword: "separador" },
             { id: "materas", keyword: "matera" },
@@ -506,9 +656,21 @@
             filterBar.hidden = false;
         }
 
-        // Piezas destacadas en el inicio (las primeras 4 de la lista)
+        // Piezas destacadas en el inicio: una por cada categoría disponible
         const featuredBox = document.querySelector("#destacados");
-        productCards.slice(0, 4).forEach((card) => {
+        const featuredCards = categoryRules
+            .map((rule) => productCards.find((card) =>
+                normalizeText(card.querySelector("h3").textContent).includes(rule.keyword)
+            ))
+            .filter(Boolean);
+        const otherFeaturedCard = productCards.find((card) =>
+            !categoryRules.some((rule) =>
+                normalizeText(card.querySelector("h3").textContent).includes(rule.keyword)
+            )
+        );
+        if (otherFeaturedCard) featuredCards.push(otherFeaturedCard);
+
+        featuredCards.forEach((card) => {
             const copy = card.cloneNode(true);
             copy.removeAttribute("tabindex");
             featuredBox.append(copy);

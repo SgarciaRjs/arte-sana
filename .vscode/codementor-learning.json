@@ -7,10 +7,17 @@
     "last_seen": "2026-10-20T02:21:34.152Z"
   },
   "CSS-001": {
-    "occurrences": 2614,
+    "occurrences": 2668,
     "confidence": 1,
     "mastered_explicitly": false,
     "first_seen": "2026-10-03T01:57:48.348Z",
-    "last_seen": "2026-10-21T22:17:33.617Z"
+    "last_seen": "2026-10-24T19:38:27.811Z"
+  },
+  "SEC-004": {
+    "occurrences": 60,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-10-21T22:26:19.281Z",
+    "last_seen": "2026-10-22T02:42:39.959Z"
   }
 }
