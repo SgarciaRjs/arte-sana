@@ -7,17 +7,24 @@
     "last_seen": "2026-10-20T02:21:34.152Z"
   },
   "CSS-001": {
-    "occurrences": 2668,
+    "occurrences": 2968,
     "confidence": 1,
     "mastered_explicitly": false,
     "first_seen": "2026-10-03T01:57:48.348Z",
-    "last_seen": "2026-10-24T19:38:27.811Z"
+    "last_seen": "2026-11-13T02:55:26.708Z"
   },
   "SEC-004": {
-    "occurrences": 60,
+    "occurrences": 663,
     "confidence": 1,
     "mastered_explicitly": false,
     "first_seen": "2026-10-21T22:26:19.281Z",
-    "last_seen": "2026-10-22T02:42:39.959Z"
+    "last_seen": "2026-11-13T02:57:38.765Z"
+  },
+  "HTML-002": {
+    "occurrences": 69,
+    "confidence": 1,
+    "mastered_explicitly": false,
+    "first_seen": "2026-11-09T22:15:21.282Z",
+    "last_seen": "2026-11-10T00:32:13.974Z"
   }
 }

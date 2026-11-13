@@ -17,6 +17,11 @@
     --texto: #5B3F36;
     --texto-suave: #7A5A50;
 
+    /* Colores navideños centralizados */
+    --navidad-rojo: #8e3e50;
+    --navidad-tierra: #743b3d;
+    --navidad-oscuro: #713142;
+
     /* Tipografías: una script para títulos y una redondeada para el resto */
     --fuente-titulo: "Allura", cursive;
     --fuente-texto: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -26,6 +31,7 @@
     --radio: 20px;
     --sombra: 0 10px 30px rgba(184, 74, 114, 0.12);
     --sombra-hover: 0 18px 40px rgba(184, 74, 114, 0.22);
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 *,
@@ -105,11 +111,22 @@ a {
     border: 2px solid transparent;
     border-radius: 999px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    transition:
+        transform 180ms var(--ease-out),
+        box-shadow 180ms var(--ease-out),
+        background-color 150ms ease-out,
+        color 150ms ease-out;
 }
 
 .btn:active {
-    transform: scale(0.97);
+    transform: scale(0.96) translateY(0px);
+    transition-duration: 80ms;
+}
+
+.btn-primario:active,
+.btn-secundario:active {
+    transform: scale(0.96) translateY(0px);
+    transition-duration: 80ms;
 }
 
 .btn:focus-visible,
@@ -295,7 +312,7 @@ a {
 .sidebar {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     width: fit-content;
     padding: 4px;
@@ -343,7 +360,7 @@ a {
     bottom: 4px;
     left: 4px;
     z-index: 1;
-    width: calc((100% - 8px) / 3);
+    width: calc((100% - 8px) / 4);
     background: var(--rosa);
     border-radius: 999px;
     box-shadow: 0 4px 12px rgba(184, 74, 114, 0.35);
@@ -359,6 +376,10 @@ a {
 
 .sidebar[data-active="2"] .glass-glider {
     transform: translateX(200%);
+}
+
+.sidebar[data-active="3"] .glass-glider {
+    transform: translateX(300%);
 }
 
 /* Cuando se está en una página que no está en el menú (Contacto) */
@@ -503,6 +524,211 @@ a {
 }
 
 /* ==========================================================
+   EDICIÓN DE NAVIDAD
+   ========================================================== */
+.seccion-navidad {
+    position: relative;
+    isolation: isolate;
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    padding: clamp(22px, 4vw, 46px);
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 10% 0%, rgba(255, 255, 255, .94), transparent 42%),
+        linear-gradient(145deg, #f7e8dc 0%, #fff8ee 45%, #eaf2e6 100%);
+    border: 1px solid rgba(184, 74, 114, .2);
+    border-radius: 34px;
+    box-shadow: var(--sombra-hover);
+}
+
+.navidad-copo {
+    position: absolute;
+    top: -1.5rem;
+    z-index: 0;
+    color: rgba(255, 255, 255, .85);
+    font-size: 1.4rem;
+    pointer-events: none;
+    animation: navidad-caer 6s linear infinite;
+}
+
+@keyframes navidad-caer {
+    to { transform: translate3d(12px, 115vh, 0) rotate(120deg); }
+}
+
+.navidad-encabezado {
+    position: relative;
+    z-index: 1;
+    max-width: 660px;
+    margin: 0 auto clamp(30px, 5vw, 52px);
+    text-align: center;
+}
+
+.navidad-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin-bottom: .55rem;
+    padding: .32rem .85rem;
+    color: #fff;
+    background: var(--navidad-rojo);
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.navidad-encabezado h2 {
+    margin-bottom: .7rem;
+    font-family: var(--fuente-titulo);
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 400;
+    line-height: .98;
+    color: var(--navidad-tierra);
+}
+
+.navidad-encabezado > p:last-of-type {
+    max-width: 54ch;
+    margin: 0 auto;
+    color: var(--texto-suave);
+}
+
+.navidad-destello {
+    position: absolute;
+    top: 8%;
+    right: -3%;
+    color: #b48a48;
+    font-size: clamp(1.7rem, 4vw, 3rem);
+    animation: navidad-brillar 2.8s ease-in-out infinite alternate;
+}
+
+.navidad-galeria {
+    display: grid;
+    position: relative;
+    z-index: 1;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(13px, 2vw, 22px);
+}
+
+.navidad-producto {
+    overflow: hidden;
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid rgba(142, 62, 80, .16);
+    border-radius: 24px;
+    box-shadow: 0 9px 24px rgba(91, 63, 54, .1);
+    transition: transform 250ms var(--ease-out), box-shadow 250ms var(--ease-out);
+}
+
+/* Teclado: solo sombra. Mouse: elevación (en táctil se queda quieta) */
+.navidad-producto:focus-within {
+    box-shadow: 0 18px 34px rgba(91, 63, 54, .17);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .navidad-producto:hover {
+        transform: translateY(-7px) rotate(-.5deg);
+        box-shadow: 0 18px 34px rgba(91, 63, 54, .17);
+    }
+
+    .navidad-producto:hover .navidad-foto img {
+        transform: scale(1.055);
+    }
+}
+
+.navidad-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 300ms var(--ease-out);
+}
+
+.navidad-foto {
+    aspect-ratio: 1 / 1.04;
+    flex: none;
+    overflow: hidden;
+    background: #f4e3d2;
+}
+
+/* Igualar altura de tarjetas y alinear botones */
+.navidad-producto {
+    display: flex;
+    flex-direction: column;
+}
+
+.navidad-info {
+    flex: 1;
+}
+
+.navidad-pedir {
+    margin-top: auto;
+}
+
+.navidad-producto:nth-child(3) .navidad-foto img {
+    object-position: 65% center;
+}
+
+.navidad-info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .4rem;
+    padding: 1rem;
+}
+
+.navidad-numero {
+    color: var(--navidad-rojo);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.navidad-info h4 {
+    margin: 0 0 .35rem;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.navidad-info h3 {
+    margin: 0 0 .35rem;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+
+.navidad-pedir {
+    min-height: 44px;
+    padding: .4rem .5rem;
+    font-size: .8rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.navidad-pedir:hover,
+.navidad-pedir:focus-visible {
+    color: #fff;
+    background: var(--navidad-oscuro);
+    border-color: var(--navidad-oscuro);
+}
+
+.navidad-cierre {
+    position: relative;
+    z-index: 1;
+    margin: clamp(24px, 4vw, 38px) auto 0;
+    color: var(--navidad-tierra);
+    font-family: var(--fuente-titulo);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    text-align: center;
+}
+
+.navidad-cierre span { color: var(--rosa); }
+
+@keyframes navidad-brillar {
+    from { opacity: .55; transform: scale(.9) rotate(-10deg); }
+    to { opacity: 1; transform: scale(1.12) rotate(10deg); }
+}
+
+/* ==========================================================
    PRODUCTOS
    ========================================================== */
 .seccion-productos {
@@ -518,7 +744,8 @@ a {
     margin: 0 0 2.2rem;
 }
 
-.chip {
+.chip,
+.filtro-btn {
     padding: 0.5rem 1.15rem;
     font: inherit;
     font-size: 0.9rem;
@@ -531,12 +758,15 @@ a {
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.chip:hover {
+.chip:hover,
+.filtro-btn:hover {
     color: var(--rosa-oscuro);
     border-color: var(--rosa);
 }
 
-.chip[aria-pressed="true"] {
+.chip[aria-pressed="true"],
+.filtro-btn[aria-pressed="true"],
+.filtro-btn.activo {
     color: #fff;
     background: var(--rosa);
     border-color: var(--rosa);
@@ -590,7 +820,7 @@ a {
     border-radius: var(--radio);
     box-shadow: var(--sombra);
     outline: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
 }
 
 .producto:hover,
@@ -609,7 +839,7 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 350ms var(--ease-out);
 }
 
 .producto:hover .producto-img img {
@@ -656,7 +886,12 @@ a {
     background: var(--crema);
     border: 2px solid var(--rosa-suave);
     border-radius: 999px;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 180ms ease-out, color 180ms ease-out, border-color 180ms ease-out;
+}
+
+.btn-pedir:active {
+    transform: scale(0.97);
+    transition-duration: 80ms;
 }
 
 .btn-pedir:hover,
@@ -1015,6 +1250,8 @@ a {
     }
 
     .linea-contacto,
+    .navidad-destello,
+    .navidad-copo,
     .socialContainer:hover .socialSvg,
     .socialContainer:focus-visible .socialSvg,
     .topbar--rebote,
@@ -1025,7 +1262,9 @@ a {
     }
 
     .producto:hover,
-    .producto:focus-within {
+    .producto:focus-within,
+    .navidad-producto:hover,
+    .navidad-producto:focus-within {
         transform: none;
     }
 }
@@ -1094,6 +1333,10 @@ a {
     .productos-galeria {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .navidad-galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 500px) {
@@ -1136,7 +1379,26 @@ a {
     .sidebar-link {
         min-width: 0;
         padding: 0.55rem 0.3rem;
-        font-size: 0.82rem;
+        font-size: 0.76rem;
+    }
+
+    .seccion-navidad {
+        padding: 24px 14px;
+        border-radius: 24px;
+    }
+
+    .navidad-info {
+        min-height: 142px;
+        padding: .75rem;
+    }
+
+    .navidad-info h3 {
+        font-size: .9rem;
+    }
+
+    .navidad-pedir {
+        padding: .48rem .35rem;
+        font-size: .72rem;
     }
 
     .filtros {
@@ -1207,3 +1469,37 @@ a {
         height: 34px;
     }
 }
+/* ==========================================================
+   PANTALLAS MUY ANGOSTAS (≤ 380px)
+   ========================================================== */
+@media (max-width: 380px) {
+    .sidebar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        border-radius: 22px;
+    }
+    .navidad-galeria { grid-template-columns: 1fr; }
+
+    .sidebar-link {
+        padding: 0.55rem 0.4rem;
+        font-size: 0.8rem;
+        text-align: center;
+        white-space: normal;
+    }
+
+    /* El deslizador solo sirve con 4 columnas en una fila */
+    .glass-glider {
+        display: none;
+    }
+
+    /* Sin deslizador, el botón activo se pinta solo */
+    .sidebar-link[aria-current="page"] {
+        background: var(--rosa);
+        box-shadow: 0 4px 12px rgba(184, 74, 114, 0.35);
+    }
+    
+}        
+
+.navidad-producto[hidden] {
+    display: none;
+}
+                                       

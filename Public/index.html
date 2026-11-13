@@ -35,6 +35,7 @@
         <nav class="sidebar" aria-label="Navegación principal" data-active="0">
             <a class="sidebar-link" href="#inicio">Inicio</a>
             <a class="sidebar-link" href="#productos">Productos</a>
+            <a class="sidebar-link" href="#navidad">Navidad ✨</a>
             <a class="sidebar-link" href="#historia">Mi historia</a>
             <span class="glass-glider" aria-hidden="true"></span>
         </nav>
@@ -380,7 +381,458 @@
             </template>
         </section>
 
-        <!-- SECCIÓN 3: CONTACTO -->
+        <!-- SECCIÓN 3: EDICIÓN DE NAVIDAD -->
+
+        <section id="navidad" class="seccion-pagina seccion-navidad" aria-labelledby="navidad-titulo">
+
+            <!-- Filtros navideños — dentro de la sección para que se muestren/oculten juntos -->
+            <div class="filtros filtros-navidad" role="group" aria-label="Filtrar productos navideños">
+                <button type="button" class="filtro-btn activo" data-navidad-filtro="todos"
+                    aria-pressed="true">Todos</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="charms"
+                    aria-pressed="false">Charms</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="Porta todo navideño"
+                    aria-pressed="false">Porta todo navideño</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="Pulseras navideñas"
+                    aria-pressed="false">Pulseras navideñas</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="Decoracion navideña"
+                    aria-pressed="false">Decoracion navideña</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="Kit-pintura" aria-pressed="false">Kit de
+                    pintura navideña</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="Lapiceros decorados con su portanota"
+                    aria-pressed="false">Lapiceros decorados con su portanota</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="Kit-tasa" aria-pressed="false">Kit de
+                    tasas con cucharita y porta vasos navideños</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="Box de regalo" aria-pressed="false">Box de
+                    regalo</button>
+                <button type="button" class="filtro-btn" data-navidad-filtro="Accesorios celulares"
+                    aria-pressed="false">Accesorios celulares</button>
+            </div>
+            <div class="navidad-luces" aria-hidden="true"></div>
+            <header class="navidad-encabezado">
+                <p class="navidad-etiqueta"><i class="bi bi-stars" aria-hidden="true"></i> Colección especial</p>
+                <h2 id="navidad-titulo">Una Navidad hecha a mano</h2>
+                <p>Pequeños detalles llenos de color, ternura y espíritu navideño. Elige tu favorito y escríbenos para
+                    pedirlo.</p>
+                <span class="navidad-destello" aria-hidden="true">✦</span>
+            </header>
+            <div class="navidad-galeria" aria-label="Charms navideños">
+                <article class="navidad-producto " data-categoria="charms">
+                    <div class="navidad-foto"><img src="img/Charm%20navide%C3%B1o1.jpeg"
+                            alt="Charm navideño artesanal con borla roja y cuentas festivas" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Charm navideño</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20rojo"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="charms">
+                    <div class="navidad-foto"><img src="img/Charm%20navide%C3%B1o2.jpeg"
+                            alt="Charm navideño artesanal con borla verde y cuentas de colores" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Charm navideño </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20verde"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="charms">
+                    <div class="navidad-foto"><img src="img/Charm%20navide%C3%B1o3.jpeg"
+                            alt="Charm navideño artesanal con borla verde y adornos festivos" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Charm navideño alegre</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="charms">
+                    <div class="navidad-foto"><img src="img/Charm%20navide%C3%B1o4.jpeg"
+                            alt="Charm navideño artesanal con cuentas rojas y blancas" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Charm navideño clásico</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20cl%C3%A1sico"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <article class="navidad-producto" data-categoria="charms">
+                    <div class="navidad-foto"><img src="img/Charm navideño5.jpeg" alt="Charm navideño 1"
+                            loading="lazy">"
+                        alt="Charm navideño artesanal con borla verde y adornos festivos" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3> Charm navideño </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="charms">
+                    <div class="navidad-foto"><img src="img/Charm navideño6.jpeg" alt="Charm navideño 1"
+                            loading="lazy">"
+                        alt="Charm navideño artesanal con borla verde y adornos festivos" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3> Charm navideño </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="charms">
+                    <div class="navidad-foto"><img src="img/Charm navideño7.jpeg" alt="Charm navideño 1"
+                            loading="lazy">"
+                        alt="Charm navideño artesanal con borla verde y adornos festivos" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3> Charm navideño</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="charms">
+                    <div class="navidad-foto"><img src="img/Charm navideño8.jpeg" alt="Charm navideño 1"
+                            loading="lazy">"
+                        alt="Charm navideño artesanal con borla verde y adornos festivos" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3> Charm navideño</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- SECCIÓN Producto Para celular -->
+
+                <article class="navidad-producto" data-categoria="Accesorios celulares">
+                    <div class="navidad-foto"><img src="img/Accesorio celular.jpeg" alt="Charm navideño 1"
+                            loading="lazy">"
+                        alt="Charm navideño artesanal con borla verde y adornos festivos" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3> Accesorio para celular</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Accesorios celulares">
+                    <div class="navidad-foto"><img src="img/Accesorio celular2.jpeg" alt="Charm navideño 1"
+                            loading="lazy">"
+                        alt="Charm navideño artesanal con borla verde y adornos festivos" loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3> Accesorio para celular</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- PULSERAS navideñas-->
+
+                <article class="navidad-producto" data-categoria="Pulseras navideñas">
+                    <div class="navidad-foto"><img src="img/Pulsera navideña.jpeg" alt="Pulsera navideña 1"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3> Pulsera navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Pulseras navideñas">
+                    <div class="navidad-foto"><img src="img/Pulsera navideña2.jpeg" alt="Pulsera navideña 2"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Pulsera navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Pulseras navideñas">
+                    <div class="navidad-foto"><img src="img/Pulsera navideña3.jpeg" alt="Pulsera navideña 3"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Pulsera navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Pulseras navideñas">
+                    <div class="navidad-foto"><img src="img/Pulsera navideña4.jpeg" alt="Pulsera navideña 4"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Pulsera navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+
+                <!-- Porta todo navideño -->
+                <article class="navidad-producto" data-categoria="Porta todo navideño">
+                    <div class="navidad-foto"><img src="img/Porta todo.jpeg" alt="Porta todo navideño" loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Porta todo navideño </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Porta todo navideño">
+                    <div class="navidad-foto"><img src="img/Porta todo2.jpeg" alt="Porta todo navideño 2"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Porta todo navideño </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Porta todo navideño">
+                    <div class="navidad-foto"><img src="img/Porta todo3.jpeg" alt="Porta todo navideño 3"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Porta todo navideño </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Porta todo navideño">
+                    <div class="navidad-foto"><img src="img/Porta todo4.jpeg" alt="Porta todo navideño 4"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Porta todo navideño </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20el%20Charm%20navide%C3%B1o%20alegre"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- Decoracion navideña -->
+
+                <article class="navidad-producto" data-categoria="Decoracion navideña">
+                    <div class="navidad-foto"><img src="img/Decoracion navideña.jpeg" alt="Decoracion navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Decoracion navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Decoracion navideña">
+                    <div class="navidad-foto"><img src="img/Decoracion navideña2.jpeg" alt="Decoracion navideña"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Decoracion navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Decoracion navideña">
+                    <div class="navidad-foto"><img src="img/Decoracion navideña3.jpeg" alt="Decoracion navideña"
+                            loading="lazy"></div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Decoracion navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <!-- Kit de pintura navideña -->
+
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña2.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña3.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña4.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña5.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña6.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña7.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña8.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña9.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña10.jpeg"
+                            alt="Kit de pintura navideña" loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+                <article class="navidad-producto" data-categoria="Kit-pintura">
+                    <div class="navidad-foto"><img src="img/Kit de pintura navideña11.jpeg"
+                            alt="Kit de pintura navideña" loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de pintura navideña </h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <!--Lapiceros decorados con su portanota -->
+
+                <article class="navidad-producto" data-categoria="Lapiceros decorados con su portanota">
+                    <div class="navidad-foto"><img src="img/Lapiceros decorados.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Lapiceros decorados con su portanota</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <article class="navidad-producto" data-categoria="Lapiceros decorados con su portanota">
+                    <div class="navidad-foto"><img src="img/Lapiceros decorados2.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Lapiceros decorados con su portanota</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <!--Kit de tasas con cucharita y porta vasos navideños -->
+
+                <article class="navidad-producto" data-categoria="Kit-tasa">
+                    <div class="navidad-foto"><img src="img/Kit de tasa.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Kit de tasa con cucharita y porta vaso navideño</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+                <!--Box de regalo -->
+
+                <article class="navidad-producto" data-categoria="Box de regalo">
+                    <div class="navidad-foto"><img src="img/Box de regalo.jpeg" alt="Kit de pintura navideña"
+                            loading="lazy">
+                    </div>
+                    <div class="navidad-info"><span class="navidad-numero">Hecho con amor</span>
+                        <h3>Box de regalo</h3><a class="btn-pedir navidad-pedir"
+                            href="https://api.whatsapp.com/send?phone=50688555545&amp;text=Hola%20Arte-Sana%2C%20quiero%20consultar%20por%20la%20Decoracion%20navide%C3%B1a"
+                            target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Pedir por
+                            WhatsApp</a>
+                    </div>
+                </article>
+
+
+            </div>
+            <p class="navidad-cierre">Que esta temporada esté llena de detalles que cuentan historias <span
+                    aria-hidden="true">♡</span></p>
+        </section>
+
+        <!-- SECCIÓN 4: CONTACTO -->
         <section id="contacto" class="seccion-pagina contacto-seccion" aria-labelledby="contacto-titulo">
             <div class="contacto-tarjeta">
                 <h2 class="titulo-seccion" id="contacto-titulo">Contáctame</h2>
@@ -488,6 +940,21 @@
         const sectionLinks = [...document.querySelectorAll(".sidebar-link")];
         const allSections = [...document.querySelectorAll(".seccion-pagina")];
         const sectionNav = document.querySelector(".sidebar");
+
+        // Brillitos de nieve decorativos: discretos y desactivados si se reduce el movimiento.
+        const holidayPanel = document.querySelector("#navidad");
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            for (let i = 0; i < 14; i += 1) {
+                const flake = document.createElement("span");
+                flake.className = "navidad-copo";
+                flake.setAttribute("aria-hidden", "true");
+                flake.textContent = i % 3 === 0 ? "✦" : "·";
+                flake.style.left = `${(i * 37 + 9) % 100}%`;
+                flake.style.animationDelay = `${(i % 7) * -0.65}s`;
+                flake.style.animationDuration = `${5 + (i % 5)}s`;
+                holidayPanel.append(flake);
+            }
+        }
 
         function switchSection(targetId, updateHistory = true) {
             const target = document.getElementById(targetId.slice(1));
@@ -819,6 +1286,29 @@
 
             lastScrollY = currentScrollY;
         }, { passive: true });
+
+        const botonesNavidad = document.querySelectorAll("[data-navidad-filtro]");
+        const productosNavidad = document.querySelectorAll(".navidad-producto");
+
+        botonesNavidad.forEach((boton) => {
+            boton.addEventListener("click", () => {
+                const categoria = boton.dataset.navidadFiltro;
+
+                productosNavidad.forEach((producto) => {
+                    const coincide =
+                        categoria === "todos" ||
+                        producto.dataset.categoria === categoria;
+
+                    producto.hidden = !coincide;
+                });
+
+                botonesNavidad.forEach((otroBoton) => {
+                    const seleccionado = otroBoton === boton;
+                    otroBoton.classList.toggle("activo", seleccionado);
+                    otroBoton.setAttribute("aria-pressed", String(seleccionado));
+                });
+            });
+        });
     </script>
 </body>
 
